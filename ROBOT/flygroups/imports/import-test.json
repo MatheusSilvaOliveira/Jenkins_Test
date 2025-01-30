@@ -1,0 +1,11 @@
+{
+    "fields": {
+        "project": {
+            "key": "XRAY"
+        },
+        "summary": "TEX001",
+        "issuetype": {
+            "name": "Test Execution"
+        }
+    }
+}
