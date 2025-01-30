@@ -18,7 +18,8 @@ pipeline {
     stages {
         stage("Run Robot") {
             steps {
-                "robot --nostatusrc -d reports ROBOT/flygroups/test/flygroups.robot"
+                script{
+                bat "robot --nostatusrc -d reports ROBOT/flygroups/test/flygroups.robot"
             }
         }
 		stage("Import Reports") {
