@@ -16,7 +16,7 @@ pipeline {
 	agent {
     node {
         label 'Medtronic'
-        customWorkspace 'C:\\Jenkins'
+        customWorkspace 'C:\\Pipeline\\Jenkins'
     }
 }
 
