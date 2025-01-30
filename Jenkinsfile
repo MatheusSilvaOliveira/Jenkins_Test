@@ -1,4 +1,5 @@
 
+
 pipeline {
 	parameters {
 		string defaultValue: 'TC001', description: 'Select TC will be run(e.g TC001)', name: 'include'
@@ -16,11 +17,14 @@ pipeline {
 
     stages {
         stage("Run Robot") {
-            echo "Ola"
+            steps {
+                echo "Ola"
+            }
         }
 		stage("Import Reports") {
-			echo "Tchau"
+			steps {
+				echo "Tchau"
+			}
 		}
     }
-
 }
