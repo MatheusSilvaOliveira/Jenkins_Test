@@ -13,7 +13,7 @@ pipeline {
 		choice choices: ['NO', 'YES'], description: 'Same Test Execution', name: 'sameExec'
 	}
 
-	agent any
+	agent "Medtronic"
 
     stages {
         stage("Run Robot") {
