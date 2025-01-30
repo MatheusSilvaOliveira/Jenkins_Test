@@ -13,7 +13,12 @@ pipeline {
 		choice choices: ['NO', 'YES'], description: 'Same Test Execution', name: 'sameExec'
 	}
 
-	agent "Medtronic"
+	agent {
+    node {
+        label 'Medtronic'
+        customWorkspace '/home/jenkins'
+    }
+}
 
     stages {
         stage("Run Robot") {
