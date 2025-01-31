@@ -31,7 +31,7 @@ pipeline {
 		stage("Import Reports") {
 			steps {
 				script {
-                    step([$class: 'XrayImportBuilder', endpointName: '/robot/multipart', importFilePath: 'reports/*.xml', importToSameExecution: 'false', projectKey: 'DIS', serverInstance: 'CLOUD-9775b630-4ac9-4fa1-93d8-f2bcbbcacc5e', importInParallel: 'false', testImportInfo: 'ROBOT/flygroups/imports/import-test.json', inputTestInfoSwitcher: 'filePath', inputInfoSwitcher: 'fileContent', importInfo: '''{
+                    step([$class: 'XrayImportBuilder', endpointName: '/robot/multipart', importFilePath: 'reports/*.xml', importToSameExecution: 'false', projectKey: 'DIS', serverInstance: 'CLOUD-0259adf3-6a60-4e7e-8e5b-60902496c23e', importInParallel: 'false', testImportInfo: 'ROBOT/flygroups/imports/import-test.json', inputTestInfoSwitcher: 'filePath', inputInfoSwitcher: 'fileContent', importInfo: '''{
                             "fields": {
                                 "project": {
                                     "key": "DIS"
