@@ -30,7 +30,22 @@ pipeline {
         }
 		stage("Import Reports") {
 			steps {
-				echo "Tchau"
+				script {
+                    step([$class: 'XrayImportBuilder', endpointName: '/robot/multipart', importFilePath: 'reports/*.xml', importToSameExecution: 'false', projectKey: 'XRAY', serverInstance: 'CLOUD-9775b630-4ac9-4fa1-93d8-f2bcbbcacc5e', importInParallel: 'false', testImportInfo: 'ROBOT/flygroups/imports/import-test.json', inputTestInfoSwitcher: 'filePath', inputInfoSwitcher: 'fileContent', importInfo: '''{
+                            "fields": {
+                                "project": {
+                                    "key": "XRAY"
+                                },
+                                "summary": "Test",
+                                "issuetype": {
+                                    "name": "Test Execution"
+                                }
+                            },
+                            "xrayFields": {
+                                    "testPlanKey": "DIS-53"
+                            }
+                        }'''])
+                }
 			}
 		}
     }
